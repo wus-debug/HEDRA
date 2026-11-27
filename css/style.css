@@ -106,18 +106,6 @@ button {
 .home .logo { font-size: 44px; }
 
 /* --------------------------------------------------------------------------
-   Hero / Startbildschirm
-   -------------------------------------------------------------------------- */
-.hero {
-  position: relative;
-  height: 100vh;
-  height: 100svh;
-  min-height: 480px;
-  background: #d8d2c4 url("../images/hero-placeholder.svg") center / cover no-repeat;
-  /* Echtes Bild: url("../images/hero.jpg") */
-}
-
-/* --------------------------------------------------------------------------
    Seitliche Panels (Menu links, Kontakt rechts)
    -------------------------------------------------------------------------- */
 .overlay {
@@ -244,23 +232,27 @@ button {
   margin-bottom: 64px;
 }
 
-/* ÜBER: zentrales Bild, darunter zentrierter Text (analog polpi) */
-.about {
+/* Startseite und ÜBER: zentrales Bild auf beigem Grund (analog polpi).
+   Das Bild passt sich der Fensterhöhe an, damit es auf dem Startbildschirm
+   vollständig sichtbar ist. */
+.feature {
   padding: clamp(130px, 21vh, 230px) var(--gutter) 0;
 }
 
-.about-figure {
-  width: min(1024px, 100%);
+.feature-figure {
+  width: min(100%, 1024px, max(360px, calc((100vh - 300px) * 4 / 3)));
   margin: 0 auto;
 }
 
-.about-figure img {
+.feature-figure img {
   display: block;
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
   background: #e6e1d3;
 }
+
+.home .feature { padding-bottom: clamp(80px, 14vh, 150px); }
 
 .about-text {
   max-width: 620px;
