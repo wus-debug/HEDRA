@@ -223,7 +223,8 @@ button {
   font-weight: 400;
   font-size: 15px;          /* Firmennamen wie geschrieben: «HEDRA 28 GmbH» */
   letter-spacing: 0.04em;
-  margin-bottom: 10px;
+  line-height: 1.75;
+  margin-bottom: 0;         /* Firma, Strasse, PLZ/Ort als ein Block */
 }
 
 .contact-block address,
@@ -232,6 +233,9 @@ button {
   font-size: 15px;
   line-height: 1.75;
 }
+
+/* Leerzeile zwischen Adresse und Name/Telefon/E-Mail */
+.contact-block address + p { margin-top: 1.75em; }
 
 .contact-block a { border-bottom: 1px solid var(--line); transition: border-color 0.2s; }
 .contact-block a:hover { border-color: var(--ink); }
