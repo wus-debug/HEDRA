@@ -16,7 +16,7 @@ Statische Website der HEDRA 28 GmbH (Auftritt: **HEDRA**). Layout angelehnt an p
 - **Bild Über:** `images/about-placeholder.svg` in `ueber.html` durch ein echtes Foto ersetzen.
 - **Impressum:** Führt HEDRA 28 GmbH und HEDRA 27 GmbH mit Angaben gemäss Handelsregister (zefix.ch).
 - **Kontaktdaten:** Stehen in allen HTML-Dateien im Block `<aside id="kontakt">` (HEDRA 28 GmbH und HEDRA 27 GmbH).
-- **Schrift Avenir Book:** Die ganze Seite verwendet ausschliesslich Avenir Book. Avenir ist lizenzpflichtig (Monotype/Linotype). Damit sie auf allen Geräten erscheint, die lizenzierten Webfonts als `fonts/AvenirLTStd-Book.woff2` und `fonts/AvenirLTStd-Book.woff` ablegen. Ohne diese Dateien wird Avenir Book nur angezeigt, wo die Schrift installiert ist (z. B. Mac/iPhone); sonst erscheint die Ersatzschrift Nunito Sans.
+- **Schrift Avenir Book:** Die ganze Seite verwendet Avenir Book, fett (Firmennamen im Kontakt) Avenir Heavy (`fonts/AvenirLTStd-Heavy.woff2`/`.woff`). Avenir ist lizenzpflichtig (Monotype/Linotype). Damit sie auf allen Geräten erscheint, die lizenzierten Webfonts als `fonts/AvenirLTStd-Book.woff2` und `fonts/AvenirLTStd-Book.woff` ablegen. Ohne diese Dateien wird Avenir Book nur angezeigt, wo die Schrift installiert ist (z. B. Mac/iPhone); sonst erscheint die Ersatzschrift Nunito Sans.
 
 ## Lokal ansehen
 `index.html` im Browser öffnen – kein Build nötig.
