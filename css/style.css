@@ -334,6 +334,7 @@ a.moment:hover figcaption { text-decoration: underline; text-underline-offset: 4
   width: var(--feature-w);
   margin: 0 auto;
   container-type: inline-size; /* Layout richtet sich nach dieser Breite */
+  position: relative;
 }
 
 .md-layout {
@@ -371,7 +372,23 @@ a.moment:hover figcaption { text-decoration: underline; text-underline-offset: 4
 .md-thumb:hover img { opacity: 0.8; }
 .md-thumb:focus-visible { outline: 1px solid var(--ink); outline-offset: 3px; }
 
-.md-info { padding-top: clamp(16px, 5vh, 48px); }
+.md-info { padding-top: 0; }
+
+/* Zurück zur Übersicht: unterstrichenes x oben rechts (wie beim Schliessen der Panels) */
+.md-back {
+  display: block;
+  width: fit-content;
+  margin: 0 0 clamp(12px, 3vh, 28px) auto;
+  font-size: 15px;
+  line-height: 1;
+  padding: 4px 0;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+}
+
+.md-back:hover { opacity: 0.6; }
+.md-back:focus-visible { outline: 1px solid var(--ink); outline-offset: 3px; }
 
 .md-title {
   font-weight: 400;
@@ -401,6 +418,8 @@ a.moment:hover figcaption { text-decoration: underline; text-underline-offset: 4
   .md-layout { grid-template-columns: 1fr; row-gap: 48px; }
   .md-info { padding-top: 0; }
   .md-title { margin-bottom: 32px; }
+  /* x steht hier oberhalb des grossen Bildes, rechtsbündig */
+  .md-back { position: absolute; top: -36px; right: 0; margin: 0; }
 }
 
 /* Footer: zentriert © HEDRA, darunter Impressum */
