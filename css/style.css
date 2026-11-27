@@ -27,6 +27,9 @@
   --panel-w: min(420px, 100vw);
   --gutter: clamp(16px, 3vw, 40px);
   --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  /* Breite des zentralen Bildes auf der Startseite; gilt auch für Momente */
+  --feature-h-w: max(360px, calc((100vh - 300px) * 4 / 3)); /* passt das Bild in die Fensterhöhe */
+  --feature-w: min(100%, 1024px, var(--feature-h-w));
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -265,7 +268,7 @@ button {
 }
 
 .feature-figure {
-  width: min(100%, 1024px, max(360px, calc((100vh - 300px) * 4 / 3)));
+  width: var(--feature-w);
   margin: 0 auto;
 }
 
@@ -290,9 +293,12 @@ button {
 .about-text p + p { margin-top: 1.2em; }
 
 .moments {
+  /* drei Bilder nebeneinander, zusammen so breit wie das Bild der Startseite */
+  width: var(--feature-w);
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: var(--gutter);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px 20px;
 }
 
 .moment figure { margin: 0; }
@@ -320,24 +326,29 @@ a.moment:hover figcaption { text-decoration: underline; text-underline-offset: 4
 /* Detailseite eines Moments (analog polpi Produktseite):
    links grosses Bild mit Vorschaubildern darunter, rechts Text */
 .moment-detail {
+  --md-gap: clamp(40px, 6vw, 100px);
   display: grid;
-  grid-template-columns: minmax(0, 620px) minmax(0, 470px);
+  /* Bildspalte so breit wie das Bild der Startseite (sofern daneben
+     mindestens 300px für den Text bleiben), Textspalte rechts */
+  grid-template-columns:
+    min(1024px, var(--feature-h-w), calc(100vw - 2 * var(--gutter) - var(--md-gap) - 300px))
+    minmax(300px, 470px);
   justify-content: center;
-  column-gap: clamp(40px, 9vw, 180px);
+  column-gap: var(--md-gap);
   padding: clamp(110px, 14vh, 155px) var(--gutter) clamp(60px, 10vh, 120px);
 }
 
 .md-main {
   display: block;
   width: 100%;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 4 / 3;      /* wie das Bild der Startseite */
   object-fit: cover;
   background: #e6e1d3;
 }
 
 .md-thumbs {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr); /* drei Vorschaubilder über die ganze Bildbreite */
   gap: 20px;
   margin-top: 20px;
 }
@@ -347,7 +358,7 @@ a.moment:hover figcaption { text-decoration: underline; text-underline-offset: 4
 .md-thumb img {
   display: block;
   width: 100%;
-  aspect-ratio: 2 / 3;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
   background: #e6e1d3;
   transition: opacity 0.2s;
@@ -381,8 +392,8 @@ a.moment:hover figcaption { text-decoration: underline; text-underline-offset: 4
   letter-spacing: 0.06em;
 }
 
-@media (max-width: 800px) {
-  .moment-detail { grid-template-columns: minmax(0, 620px); row-gap: 48px; }
+@media (max-width: 900px) {
+  .moment-detail { grid-template-columns: var(--feature-w); row-gap: 48px; }
   .md-info { padding-top: 0; }
   .md-title { margin-bottom: 32px; }
 }
@@ -432,6 +443,7 @@ a.moment:hover figcaption { text-decoration: underline; text-underline-offset: 4
   .logo-word { letter-spacing: 0.32em; margin-right: -0.32em; }
   .home .logo { font-size: clamp(28px, 9vw, 36px); }
   .menu-list a { font-size: 14px; letter-spacing: 0.04em; }
+  .moments { grid-template-columns: repeat(2, 1fr); }
   .panel-head { font-size: 14px; letter-spacing: 0.04em; }
 }
 
