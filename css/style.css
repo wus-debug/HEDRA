@@ -110,6 +110,9 @@ button {
   text-transform: uppercase;
 }
 
+/* Startseite: HEDRA doppelt so gross */
+.home .logo { font-size: 44px; }
+
 /* --------------------------------------------------------------------------
    Hero / Startbildschirm
    -------------------------------------------------------------------------- */
@@ -309,6 +312,7 @@ button {
   .site-header { padding-top: 18px; padding-bottom: 18px; }
   .header-btn { font-size: 12px; letter-spacing: 0.14em; }
   .logo { font-size: 18px; letter-spacing: 0.32em; margin-right: -0.32em; }
+  .home .logo { font-size: clamp(28px, 9vw, 36px); }
   .menu-list a { font-size: 22px; }
 }
 
