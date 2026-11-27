@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="de-CH">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Moment 01 – HEDRA</title>
+  <meta name="description" content="HEDRA – HEDRA 28 GmbH und HEDRA 27 GmbH">
+  <!-- Fallback-Schrift, falls Avenir Book nicht verfügbar ist -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <button class="header-btn header-left" type="button" data-open="menu" aria-controls="menu" aria-expanded="false">menue</button>
+    <a class="logo" href="index.html" aria-label="HEDRA – Startseite"><span class="logo-word">HEDRA</span></a>
+    <button class="header-btn header-right" type="button" data-open="kontakt" aria-controls="kontakt" aria-expanded="false">Kontakt</button>
+  </header>
+
+  <!-- Menue: gleitet von links ein -->
+  <nav id="menu" class="panel panel--left" aria-label="Hauptmenue" aria-hidden="true">
+    <div class="panel-head">
+      <span>menue</span>
+      <button class="panel-close" type="button" data-close aria-label="Menue schliessen">x</button>
+    </div>
+    <ul class="menu-list">
+      <li><a href="ueber.html">ueber</a></li>
+      <li><a href="momente.html" aria-current="page">momente</a></li>
+    </ul>
+    <div class="panel-foot">&copy; HEDRA</div>
+  </nav>
+
+  <!-- Kontakt: gleitet von rechts ein -->
+  <aside id="kontakt" class="panel panel--right" aria-label="Kontakt" aria-hidden="true">
+    <div class="panel-head">
+      <span>Kontakt</span>
+      <button class="panel-close" type="button" data-close aria-label="Kontakt schliessen">x</button>
+    </div>
+
+    <div class="contact-block">
+      <h3>HEDRA 28 GmbH</h3>
+      <address>
+        Grünhaldenstrasse 28<br>
+        8052 Zürich
+      </address>
+      <p>
+        Sebastian Wüthrich<br>
+        T <a href="tel:+41774263852">+41 77 426 38 52</a><br>
+        <a href="mailto:wus@hedra.ch">wus@hedra.ch</a>
+      </p>
+    </div>
+
+    <div class="contact-block">
+      <h3>HEDRA 27 GmbH</h3>
+      <address>
+        Zwinglistrasse 27<br>
+        8260 Stein am Rhein
+      </address>
+      <p>
+        Roger Schäfler<br>
+        T <a href="tel:+41794762161">+41 79 476 21 61</a><br>
+        <a href="mailto:scr@hedra.ch">scr@hedra.ch</a>
+      </p>
+    </div>
+  </aside>
+
+  <div class="overlay" aria-hidden="true"></div>
+
+  <main class="moment-detail">
+    <div class="md-media">
+      <img class="md-main" src="images/moment-detail-1.svg" alt="moment 01, Bild 1">
+      <div class="md-thumbs">
+        <button class="md-thumb" type="button" data-full="images/moment-detail-1.svg" aria-label="Bild 1 anzeigen" aria-current="true">
+          <img src="images/moment-detail-1.svg" alt="" loading="lazy">
+        </button>
+        <button class="md-thumb" type="button" data-full="images/moment-detail-2.svg" aria-label="Bild 2 anzeigen">
+          <img src="images/moment-detail-2.svg" alt="" loading="lazy">
+        </button>
+        <button class="md-thumb" type="button" data-full="images/moment-detail-3.svg" aria-label="Bild 3 anzeigen">
+          <img src="images/moment-detail-3.svg" alt="" loading="lazy">
+        </button>
+      </div>
+    </div>
+    <div class="md-info">
+      <h1 class="md-title">moment 01</h1>
+      <p class="md-text">Platzhaltertext: Beschreibung des Moments – was entstanden ist, wo und mit wem. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <p class="md-meta">Ort, Jahr</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div>&copy; HEDRA</div>
+    <a href="impressum.html">Impressum</a>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

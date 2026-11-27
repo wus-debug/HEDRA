@@ -41,3 +41,18 @@
   });
 
 })();
+
+// Momente-Detailseite: Klick auf ein Vorschaubild zeigt es gross
+(function () {
+  const main = document.querySelector(".md-main");
+  if (!main) return;
+  const thumbs = document.querySelectorAll(".md-thumb");
+  thumbs.forEach((btn, i) =>
+    btn.addEventListener("click", () => {
+      main.src = btn.dataset.full;
+      main.alt = main.alt.replace(/Bild \d+$/, "Bild " + (i + 1));
+      thumbs.forEach((b) => b.removeAttribute("aria-current"));
+      btn.setAttribute("aria-current", "true");
+    })
+  );
+})();
