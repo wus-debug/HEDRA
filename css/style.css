@@ -18,19 +18,6 @@
   font-display: swap;
 }
 
-/* Fett (z. B. Firmennamen im Kontakt): Avenir Heavy */
-@font-face {
-  font-family: "Avenir Book";
-  src: local("Avenir Heavy"), local("Avenir-Heavy"),
-       local("Avenir LT Std 85 Heavy"), local("AvenirLTStd-Heavy"),
-       local("Avenir LT Pro 85 Heavy"), local("AvenirLTPro-Heavy"),
-       url("../fonts/AvenirLTStd-Heavy.woff2") format("woff2"),
-       url("../fonts/AvenirLTStd-Heavy.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
 :root {
   --font: "Avenir Book", "Nunito Sans", "Helvetica Neue", Arial, sans-serif;
   --ink: #000000;
@@ -233,7 +220,7 @@ button {
 }
 
 .contact-block h3 {
-  font-weight: 700;
+  font-weight: 400;
   font-size: 15px;          /* Firmennamen wie geschrieben: «HEDRA 28 GmbH» */
   letter-spacing: 0.04em;
   line-height: 1.75;
