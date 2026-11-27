@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1200" preserveAspectRatio="xMidYMid slice">
+  <!-- Platzhalter für das Bild auf der Seite ÜBER: durch ein echtes Foto ersetzen -->
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ebe6d8"/>
+      <stop offset="1" stop-color="#cfc8b6"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1200" fill="url(#g)"/>
+  <text x="800" y="610" text-anchor="middle" font-family="Avenir Book, Avenir-Book, Nunito Sans, sans-serif" font-size="22" letter-spacing="8" fill="#000" fill-opacity="0.35">PLATZHALTER BILD</text>
+</svg>
