@@ -41,29 +41,3 @@
   });
 
 })();
-
-// Zeile unter HEDRA: falls die Schrift breiter läuft als HEDRA (z. B. andere
-// Schrift als Avenir Book), Schriftgrösse so weit verkleinern, dass sie passt.
-(function () {
-  const word = document.querySelector(".logo-word");
-  const tag = document.querySelector(".logo-tagline");
-  if (!word || !tag) return;
-  function fit() {
-    document.body.style.removeProperty("--tagline-size");
-    const probe = document.createElement("span");
-    probe.textContent = tag.textContent;
-    probe.style.cssText = "position:absolute;visibility:hidden;white-space:nowrap;letter-spacing:inherit";
-    tag.appendChild(probe);
-    const minGap = 0.4 * parseFloat(getComputedStyle(tag).fontSize); // Mindestabstand zwischen den Wörtern
-    const natural = probe.getBoundingClientRect().width + 2 * minGap;
-    probe.remove();
-    const available = tag.getBoundingClientRect().width;
-    if (natural > available) {
-      // gilt auch für menue und kontakt (gleiche Grösse wie die Zeile)
-      document.body.style.setProperty("--tagline-size", parseFloat(getComputedStyle(tag).fontSize) * (available / natural) + "px");
-    }
-  }
-  fit();
-  if (document.fonts) document.fonts.ready.then(fit);
-  window.addEventListener("resize", fit);
-})();
