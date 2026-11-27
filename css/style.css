@@ -96,10 +96,28 @@ button {
 
 .logo {
   justify-self: center;
+  display: inline-flex;
+  flex-direction: column; /* Grundlinie = HEDRA, Zusatzzeile hängt darunter */
   font-size: 22px;
+}
+
+.logo-word {
   letter-spacing: 0.42em;
   margin-right: -0.42em; /* optischer Ausgleich fürs Letter-Spacing */
   text-transform: uppercase;
+  line-height: 1.1;
+}
+
+/* Zusatzzeile unter HEDRA, exakt so breit wie das Wort HEDRA */
+.logo-tagline {
+  width: 100%;
+  margin-top: 0.1em;
+  font-size: 0.3em;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  text-align: justify;
+  text-align-last: justify;
+  white-space: nowrap;
 }
 
 /* Startseite: HEDRA doppelt so gross */
@@ -327,7 +345,8 @@ button {
 @media (max-width: 560px) {
   .site-header { padding-top: 18px; padding-bottom: 18px; }
   .header-btn { font-size: 14px; letter-spacing: 0.04em; }
-  .logo { font-size: 18px; letter-spacing: 0.32em; margin-right: -0.32em; }
+  .logo { font-size: 18px; }
+  .logo-word { letter-spacing: 0.32em; margin-right: -0.32em; }
   .home .logo { font-size: clamp(28px, 9vw, 36px); }
   .menu-list a { font-size: 22px; }
 }
