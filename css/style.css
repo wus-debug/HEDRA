@@ -114,7 +114,7 @@ button {
 .logo-tagline {
   width: 100%;
   margin-top: 0.12em;
-  font-size: 0.36em;
+  font-size: var(--tagline-size, 0.36em);
   line-height: 1.2;
   letter-spacing: 0.02em;
   text-align: justify;
@@ -123,7 +123,17 @@ button {
 }
 
 /* Startseite: HEDRA doppelt so gross */
-.home .logo { font-size: 44px; }
+.home {
+  --logo-size: 44px;
+  /* Grösse der Zeile unter HEDRA; JS verkleinert sie bei Bedarf */
+  --tagline-size: calc(var(--logo-size) * 0.36);
+}
+.home .logo { font-size: var(--logo-size); }
+
+/* Startseite: menue und kontakt auf der Grundlinie und in der Grösse
+   von «entwickeln planen realisieren» */
+.home .site-header { align-items: last baseline; }
+.home .header-btn { font-size: var(--tagline-size); letter-spacing: 0.02em; }
 
 /* --------------------------------------------------------------------------
    Seitliche Panels (Menu links, Kontakt rechts)
@@ -349,7 +359,8 @@ button {
   .header-btn { font-size: 14px; letter-spacing: 0.04em; }
   .logo { font-size: 18px; }
   .logo-word { letter-spacing: 0.32em; margin-right: -0.32em; }
-  .home .logo { font-size: clamp(28px, 9vw, 36px); }
+  .home { --logo-size: clamp(28px, 9vw, 36px); }
+  .home .header-btn { font-size: var(--tagline-size); letter-spacing: 0.02em; }
   .menu-list a { font-size: 22px; }
 }
 

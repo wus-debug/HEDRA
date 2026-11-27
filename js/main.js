@@ -49,7 +49,7 @@
   const tag = document.querySelector(".logo-tagline");
   if (!word || !tag) return;
   function fit() {
-    tag.style.fontSize = "";
+    document.body.style.removeProperty("--tagline-size");
     const probe = document.createElement("span");
     probe.textContent = tag.textContent;
     probe.style.cssText = "position:absolute;visibility:hidden;white-space:nowrap;letter-spacing:inherit";
@@ -59,7 +59,8 @@
     probe.remove();
     const available = tag.getBoundingClientRect().width;
     if (natural > available) {
-      tag.style.fontSize = parseFloat(getComputedStyle(tag).fontSize) * (available / natural) + "px";
+      // gilt auch für menue und kontakt (gleiche Grösse wie die Zeile)
+      document.body.style.setProperty("--tagline-size", parseFloat(getComputedStyle(tag).fontSize) * (available / natural) + "px");
     }
   }
   fit();
