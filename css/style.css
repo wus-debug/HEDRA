@@ -65,7 +65,7 @@ button {
   z-index: 50;
   display: grid;
   grid-template-columns: 1fr auto 1fr;
-  align-items: center;
+  align-items: baseline; /* menu, HEDRA und kontakt auf einer Grundlinie */
   padding: 22px var(--gutter);
   color: #fff;
   transition: color 0.3s var(--ease), background-color 0.3s var(--ease);
@@ -78,9 +78,9 @@ button {
 }
 
 .header-btn {
-  font-size: 13px;
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
+  font-size: 15px;
+  text-transform: lowercase;
+  letter-spacing: 0.06em;
   padding: 6px 0;
   position: relative;
 }
@@ -173,12 +173,12 @@ button {
   align-items: center;
   min-height: 34px;
   margin-bottom: 48px;
-  font-size: 13px;
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
+  font-size: 15px;
+  letter-spacing: 0.06em;
 }
 
 .panel--right .panel-head { flex-direction: row-reverse; }
+.panel-head span { text-transform: lowercase; }
 
 .panel-close {
   width: 34px; height: 34px;
@@ -310,7 +310,7 @@ button {
    -------------------------------------------------------------------------- */
 @media (max-width: 560px) {
   .site-header { padding-top: 18px; padding-bottom: 18px; }
-  .header-btn { font-size: 12px; letter-spacing: 0.14em; }
+  .header-btn { font-size: 14px; letter-spacing: 0.04em; }
   .logo { font-size: 18px; letter-spacing: 0.32em; margin-right: -0.32em; }
   .home .logo { font-size: clamp(28px, 9vw, 36px); }
   .menu-list a { font-size: 22px; }
