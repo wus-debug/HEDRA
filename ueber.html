@@ -13,7 +13,7 @@
 </head>
 <body>
 
-  <header class="site-header is-solid">
+  <header class="site-header">
     <button class="header-btn header-left" type="button" data-open="menu" aria-controls="menu" aria-expanded="false">Menu</button>
     <a class="logo" href="index.html" aria-label="HEDRA – Startseite">HEDRA</a>
     <button class="header-btn header-right" type="button" data-open="kontakt" aria-controls="kontakt" aria-expanded="false">Kontakt</button>
@@ -26,8 +26,8 @@
       <button class="panel-close" type="button" data-close aria-label="Menu schliessen"></button>
     </div>
     <ul class="menu-list">
-      <li><a href="ueber.html" aria-current="page">Über</a></li>
-      <li><a href="momente.html">Momente</a></li>
+      <li><a href="ueber.html" aria-current="page">über</a></li>
+      <li><a href="momente.html">momente</a></li>
     </ul>
     <div class="panel-foot">&copy; HEDRA</div>
   </nav>
@@ -68,14 +68,23 @@
 
   <div class="overlay" aria-hidden="true"></div>
 
-  <main class="page">
-    <h1 class="page-title">Über</h1>
-    <div class="prose">
-      <p>HEDRA steht für die HEDRA 28 GmbH und die HEDRA 27 GmbH. Hier folgt ein kurzer Text über das Unternehmen, seine Haltung und seine Arbeit.</p>
-      <p>Platzhaltertext: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+  <main class="about">
+    <figure class="about-figure">
+      <img src="images/about-placeholder.svg" alt="Platzhalterbild HEDRA">
+    </figure>
+    <div class="about-text">
+      <p>HEDRA steht für die HEDRA 28 GmbH und die HEDRA 27 GmbH. Platzhaltertext: Hier folgt ein kurzer Text über das Unternehmen, seine Haltung und seine Arbeit. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
     </div>
   </main>
-  <footer class="site-footer">&copy; HEDRA</footer>
+
+  <footer class="site-footer">
+    <ul class="footer-nav">
+      <li><a href="ueber.html" aria-current="page">über</a></li>
+      <li><a href="momente.html">momente</a></li>
+    </ul>
+    <div class="footer-copy">&copy; HEDRA</div>
+    <button class="header-btn footer-right" type="button" data-open="kontakt" aria-controls="kontakt" aria-expanded="false">kontakt</button>
+  </footer>
 
   <script src="js/main.js"></script>
 </body>

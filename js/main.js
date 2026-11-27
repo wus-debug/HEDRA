@@ -40,13 +40,4 @@
     if (e.key === "Escape") closeAll();
   });
 
-  // Header: über dem Bild weiss/transparent, beim Scrollen bzw. auf Unterseiten solid
-  const header = document.querySelector(".site-header");
-  const hero = document.querySelector(".hero");
-  function updateHeader() {
-    const solid = !hero || window.scrollY > hero.offsetHeight - header.offsetHeight;
-    header.classList.toggle("is-solid", solid);
-  }
-  updateHeader();
-  window.addEventListener("scroll", updateHeader, { passive: true });
 })();
