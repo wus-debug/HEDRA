@@ -6,6 +6,7 @@ Statische Website der HEDRA 28 GmbH (Auftritt: **HEDRA**). Layout angelehnt an p
 - `index.html` – Startseite: zentrales Bild auf hellem Beige, oben mittig **HEDRA** (analog polpi)
 - `ueber.html` – zentrales Bild mit Text darunter (analog polpi)
 - `momente.html` – Bildraster
+- `impressum.html` – Impressum (in der Fusszeile unter © HEDRA verlinkt)
 - `css/style.css` – Gestaltung (Schrift: Avenir Book)
 - `js/main.js` – Menu (links) und Kontakt (rechts) als einblendende Panels
 - `images/` – Platzhalterbilder
@@ -13,7 +14,8 @@ Statische Website der HEDRA 28 GmbH (Auftritt: **HEDRA**). Layout angelehnt an p
 ## Anpassen
 - **Bild Startseite:** Foto als `images/hero.jpg` ablegen und in `index.html` `images/hero-placeholder.svg` durch `images/hero.jpg` ersetzen (Querformat 4:3).
 - **Bild Über:** `images/about-placeholder.svg` in `ueber.html` durch ein echtes Foto ersetzen.
-- **Kontaktdaten:** In allen drei HTML-Dateien im Block `<aside id="kontakt">` die Platzhalter (Musterstrasse, Telefon, E-Mail) ersetzen.
+- **Impressum:** Platzhalter in `impressum.html` ersetzen (Adresse, vertretungsberechtigte Person, Handelsregisteramt, UID, MWST-Nr.).
+- **Kontaktdaten:** In allen HTML-Dateien im Block `<aside id="kontakt">` die Platzhalter (Musterstrasse, Telefon, E-Mail) ersetzen.
 - **Schrift Avenir Book:** Avenir ist lizenzpflichtig. Lizenzierte Webfonts als `fonts/AvenirLTStd-Book.woff2` / `.woff` ablegen. Ohne diese Dateien wird ein lokal installiertes Avenir verwendet (macOS/iOS), sonst die ähnliche Ersatzschrift Nunito Sans.
 
 ## Lokal ansehen

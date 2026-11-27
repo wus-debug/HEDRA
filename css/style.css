@@ -286,23 +286,40 @@ button {
   letter-spacing: 0.04em;
 }
 
-/* Footer: links Navigation, Mitte ©, rechts Kontakt (analog polpi) */
+/* Footer: zentriert © HEDRA, darunter Impressum */
 .site-footer {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  align-items: start;
-  gap: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
   padding: 40px var(--gutter) 64px;
   font-size: 15px;
   line-height: 1.9;
   letter-spacing: 0.04em;
+  text-align: center;
 }
 
-.footer-nav { list-style: none; }
-.footer-nav a[aria-current="page"] { text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; }
-.footer-nav a:hover { text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; }
-.site-footer .footer-right { justify-self: end; }
-.site-footer .header-btn { font-size: inherit; padding: 0; }
+.site-footer a:hover,
+.site-footer a[aria-current="page"] { text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; }
+
+/* Impressum */
+.legal {
+  max-width: 620px;
+  margin: 0 auto;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.legal h2 {
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: 0.04em;
+  margin: 2.4em 0 0.6em;
+}
+
+.legal h2:first-child { margin-top: 0; }
+.legal address { font-style: normal; }
+.legal a { text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
 
 /* --------------------------------------------------------------------------
    Mobil
@@ -313,8 +330,6 @@ button {
   .logo { font-size: 18px; letter-spacing: 0.32em; margin-right: -0.32em; }
   .home .logo { font-size: clamp(28px, 9vw, 36px); }
   .menu-list a { font-size: 22px; }
-  .site-footer { grid-template-columns: 1fr 1fr; }
-  .site-footer .footer-copy { grid-row: 2; }
 }
 
 @media (prefers-reduced-motion: reduce) {
