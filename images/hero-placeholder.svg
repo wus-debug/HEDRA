@@ -13,5 +13,5 @@
   </defs>
   <rect width="1920" height="1080" fill="url(#g)"/>
   <rect width="1920" height="1080" fill="url(#l)"/>
-  <text x="960" y="1020" text-anchor="middle" font-family="sans-serif" font-size="18" letter-spacing="6" fill="#000" fill-opacity="0.35">PLATZHALTER BILD</text>
+  <text x="960" y="1020" text-anchor="middle" font-family="Avenir Book, Avenir-Book, Nunito Sans, sans-serif" font-size="18" letter-spacing="6" fill="#000" fill-opacity="0.35">PLATZHALTER BILD</text>
 </svg>

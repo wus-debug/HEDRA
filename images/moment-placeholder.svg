@@ -7,5 +7,5 @@
     </linearGradient>
   </defs>
   <rect width="800" height="1000" fill="url(#g)"/>
-  <text x="400" y="510" text-anchor="middle" font-family="sans-serif" font-size="16" letter-spacing="5" fill="#fff" fill-opacity="0.7">PLATZHALTER</text>
+  <text x="400" y="510" text-anchor="middle" font-family="Avenir Book, Avenir-Book, Nunito Sans, sans-serif" font-size="16" letter-spacing="5" fill="#fff" fill-opacity="0.7">PLATZHALTER</text>
 </svg>
