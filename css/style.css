@@ -161,35 +161,49 @@ button {
 .panel-head span { text-transform: lowercase; }
 
 .panel-close {
-  width: 34px; height: 34px;
-  position: relative;
-  margin: 0 -8px;
+  /* Schliessen als unterstrichenes «x» (analog polpi) */
+  font-size: inherit;
+  line-height: 1;
+  padding: 4px 0;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
 }
 
-.panel-close::before,
-.panel-close::after {
-  content: "";
-  position: absolute;
-  left: 8px; right: 8px; top: 50%;
-  height: 1px;
-  background: currentColor;
-}
-.panel-close::before { transform: rotate(45deg); }
-.panel-close::after  { transform: rotate(-45deg); }
+.panel-close:hover { opacity: 0.6; }
 
 /* Menu */
 .menu-list { list-style: none; }
 
 .menu-list a {
-  display: inline-block;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   font-size: 15px;          /* gleich wie «menue» */
   letter-spacing: 0.06em;
-  padding: 4px 0;
-  transition: opacity 0.2s;
+  line-height: 1.6;
+  padding: 3px calc(var(--gutter) / 2) 3px 0;
+  margin-right: calc(var(--gutter) / -2); /* Hover-Fläche läuft etwas über das x hinaus */
+  transition: background-color 0.2s;
+}
+
+/* Pfeil rechts, erscheint beim Darüberfahren */
+.menu-list a::after {
+  content: "";
+  width: 18px;
+  height: 10px;
+  flex: none;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 10' fill='none' stroke='%23000' stroke-width='1'%3E%3Cpath d='M0 5h17M12.5 0.5 17 5l-4.5 4.5'/%3E%3C/svg%3E") center / contain no-repeat;
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: opacity 0.2s, transform 0.2s var(--ease);
 }
 
 .menu-list a:hover,
-.menu-list a[aria-current="page"] { opacity: 0.5; }
+.menu-list a:focus-visible { background: rgba(0, 0, 0, 0.045); outline: none; }
+
+.menu-list a:hover::after,
+.menu-list a:focus-visible::after { opacity: 1; transform: none; }
 
 .panel-foot {
   margin-top: auto;
