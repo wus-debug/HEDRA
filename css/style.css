@@ -324,18 +324,22 @@ a.moment:hover img { opacity: 0.85; }
 a.moment:hover figcaption { text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; }
 
 /* Detailseite eines Moments (analog polpi Produktseite):
-   links grosses Bild mit Vorschaubildern darunter, rechts Text */
+   links grosses Bild mit Vorschaubildern darunter, rechts Text.
+   Gesamtbreite und Position wie das Bild der Startseite. */
 .moment-detail {
-  --md-gap: clamp(40px, 6vw, 100px);
+  padding: clamp(130px, 21vh, 230px) var(--gutter) clamp(80px, 14vh, 150px);
+}
+
+.md-frame {
+  width: var(--feature-w);
+  margin: 0 auto;
+  container-type: inline-size; /* Layout richtet sich nach dieser Breite */
+}
+
+.md-layout {
   display: grid;
-  /* Bildspalte so breit wie das Bild der Startseite (sofern daneben
-     mindestens 300px für den Text bleiben), Textspalte rechts */
-  grid-template-columns:
-    min(1024px, var(--feature-h-w), calc(100vw - 2 * var(--gutter) - var(--md-gap) - 300px))
-    minmax(300px, 470px);
-  justify-content: center;
-  column-gap: var(--md-gap);
-  padding: clamp(110px, 14vh, 155px) var(--gutter) clamp(60px, 10vh, 120px);
+  grid-template-columns: 3fr 2fr;
+  column-gap: 40px;
 }
 
 .md-main {
@@ -367,14 +371,14 @@ a.moment:hover figcaption { text-decoration: underline; text-underline-offset: 4
 .md-thumb:hover img { opacity: 0.8; }
 .md-thumb:focus-visible { outline: 1px solid var(--ink); outline-offset: 3px; }
 
-.md-info { padding-top: clamp(24px, 9vh, 80px); }
+.md-info { padding-top: clamp(16px, 5vh, 48px); }
 
 .md-title {
   font-weight: 400;
   font-size: 15px;
   letter-spacing: 0.06em;
   text-align: center;
-  margin-bottom: clamp(40px, 8vh, 80px);
+  margin-bottom: clamp(32px, 6vh, 56px);
 }
 
 .md-text {
@@ -392,8 +396,9 @@ a.moment:hover figcaption { text-decoration: underline; text-underline-offset: 4
   letter-spacing: 0.06em;
 }
 
-@media (max-width: 900px) {
-  .moment-detail { grid-template-columns: var(--feature-w); row-gap: 48px; }
+/* Ist die Breite zu klein für Text daneben, steht der Text unter den Bildern */
+@container (max-width: 700px) {
+  .md-layout { grid-template-columns: 1fr; row-gap: 48px; }
   .md-info { padding-top: 0; }
   .md-title { margin-bottom: 32px; }
 }

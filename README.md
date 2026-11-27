@@ -6,7 +6,7 @@ Statische Website der HEDRA 28 GmbH (Auftritt: **HEDRA**). Layout angelehnt an p
 - `index.html` – Startseite: zentrales Bild auf hellem Beige, oben mittig **HEDRA** (analog polpi)
 - `ueber.html` – zentrales Bild mit Text darunter (analog polpi)
 - `momente.html` – drei Bilder nebeneinander, zusammen so breit wie das Startbild; Klick auf Bild oder Unterzeile öffnet die Detailseite
-- `moment-01.html` … `moment-06.html` – Detailseiten (analog polpi Produktseite): grosses Bild in der Breite des Startbildes, drei Vorschaubilder darunter über die ganze Bildbreite (Klick zeigt das Bild gross), rechts Titel, Text und Ort/Jahr
+- `moment-01.html` … `moment-06.html` – Detailseiten (analog polpi Produktseite): Gesamtbreite und Position wie das Startbild: links grosses Bild mit drei Vorschaubildern darunter (Klick zeigt das Bild gross), rechts Titel, Text und Ort/Jahr; bei wenig Breite steht der Text darunter
 - `impressum.html` – Impressum (in der Fusszeile unter © HEDRA verlinkt)
 - `css/style.css` – Gestaltung (Schrift: Avenir Book)
 - `js/main.js` – Menu (links) und Kontakt (rechts) als einblendende Panels
